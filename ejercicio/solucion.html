@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Actividad 1</title>
 </head>
@@ -20,39 +19,46 @@
             PIM es el acrónimo de Product Information Management, gestión de información de productos. Un sistema PIM permite recopilar, enriquecer, gestionar y distribuir de forma eficiente la información de los productos en un entorno omnicanal.
         </p>
         <h5>Realizar la siguiente actividad: Pasar el modelo PIM a un modelo PSM</h5>
-
-        <div class="mermaid">
-            classDiagram
-            class Equipo
-            Equipo : -String nombre
-            Equipo : -String tipo_nombre
-            Equipo : -String siglas
-            Equipo : +setNombre(nombre)
-            Equipo : +getNombre() String
-            Equipo : +setTipo_nombre(tipo_nombre)
-            Equipo : +getTipo_nombre() String
-            Equipo : +setSiglas(siglas)
-            Equipo : +getSiglas() String
-
-            class Jugador{
-                -String nombre
-                -String apellido
-                +setNombre(String nombre)
-                +getNombre() String
-                +setApellido(String apellido)
-                +getApellido() String
-            }
-
-            class Sancion{
-                -String observacion
-                -Double multa
-                +setObservacion(String observacion)
-                +getObservacion() String
-                +setMulta(Double multa)
-                +getMulta() Double
-            }
-            Equipo "1" --|> "0..*" Jugador : Tiene
-            Jugador "1" --|> "0..*" Sancion : Obtiene
+        <div class="row" style="text-align:center;margin-left:auto;margin-right:auto;">
+            <div class="col s10 offset-s1" style="">
+                <div class="card" style="display:block">
+                    <div class="card-content">
+                        <div class="mermaid">
+                            classDiagram
+                            class Equipo
+                            Equipo : -String nombre
+                            Equipo : -String tipo_nombre
+                            Equipo : -String siglas
+                            Equipo : +setNombre(nombre)
+                            Equipo : +getNombre() String
+                            Equipo : +setTipo_nombre(tipo_nombre)
+                            Equipo : +getTipo_nombre() String
+                            Equipo : +setSiglas(siglas)
+                            Equipo : +getSiglas() String
+                
+                            class Jugador{
+                                -String nombre
+                                -String apellido
+                                +setNombre(String nombre)
+                                +getNombre() String
+                                +setApellido(String apellido)
+                                +getApellido() String
+                            }
+                
+                            class Sancion{
+                                -String observacion
+                                -Double multa
+                                +setObservacion(String observacion)
+                                +getObservacion() String
+                                +setMulta(Double multa)
+                                +getMulta() Double
+                            }
+                            Equipo "1" --|> "0..*" Jugador : Tiene
+                            Jugador "1" --|> "0..*" Sancion : Obtiene
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <p>Paulo Jara Paltin</p>
         <p>Programa de Maestria de Ingenieria en Software</p>
